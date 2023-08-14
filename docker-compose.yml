@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:management"
+    hostname: rabbitmq
+    restart: always
+    container_name: testtasksgreen-api-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    # environment:
+    #   RABBITMQ_DEFAULT_USER: "admin" # Имя пользователя
+    #   RABBITMQ_DEFAULT_PASS: "admin" # Пароль
+    networks:
+      - my-network
+
+  m1:
+    build:
+      context: ./m1 # Путь к директории M1
+    restart: always
+    ports:
+      - '3001:3001'
+    networks:
+      - my-network
+
+  m2:
+    build:
+      context: ./m2 # Путь к директории M2
+    restart: always
+    networks:
+      - my-network
+
+networks:
+  my-network:
