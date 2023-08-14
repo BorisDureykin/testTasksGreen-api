@@ -1,8 +1,7 @@
 После загрузки проекта из репозитория выполнить команду:
-<npm install> в сервисах m1 и m2 
+"npm install" в сервисах m1 и m2 
 
-1.- Для запуска RABBITMQ в отельном контейнере docker и запуска
-    сервисов локально через  через терминал IDE коммандой <npm start>:
+1.- Для запуска RABBITMQ в отельном контейнере docker и запуска сервисов локально через терминал :
 
     1.1- Запуск RABBITMQ с указанием имени и пароля (Docker Desktop должен быть запущен):
         <docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=username -e RABBITMQ_DEFAULT_PASS=userpassword rabbitmq:management>
@@ -12,11 +11,15 @@
         в этом случае переменная rabbitMqUrl в файлах m1 и m2:
             const rabbitMqUrl = 'amqp://username:userpassword@localhost';
 
+        запуск сервисов m1, m2 произвести в терминале IDE, находясь в дериктории сервиса, командой "npm start"
+
     1.2- Запуск RABBITMQ с параметрами по умолчанию (Docker Desktop должен быть запущен):
         <docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management>
 
         в этом случае переменная rabbitMqUrl в файлах m1 и m2:
             const rabbitMqUrl = 'amqp://localhost';
+
+        запуск сервисов m1, m2 произвести в терминале IDE, находясь в дериктории сервиса, командой "npm start"
 
 
 2.- Для запуска RABBITMQ и сервисов m1 и m2 в одной группе контейнеров Docker compose:
