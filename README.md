@@ -23,7 +23,7 @@
     запустить Docker Desktop,
     переменная rabbitMqUrl в файлах m1 и m2:
         const rabbitMqUrl = 'amqp://rabbitmq';
-    находясь в корневой дериктории проекта "testTaskGreen-api" выполнить команду:
+    находясь в корневой директории проекта "testTaskGreen-api" выполнить команду:
     <docker-compose up>
     
 
