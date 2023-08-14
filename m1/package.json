@@ -1,0 +1,18 @@
+{
+  "name": "m1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "m1.js",
+  "scripts": {
+    "start": "nodemon m1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "log4js": "^6.9.1"
+  }
+}
